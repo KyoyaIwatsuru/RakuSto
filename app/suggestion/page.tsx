@@ -21,7 +21,7 @@ export default function Page() {
         </VStack>
       ) : (
         <Box>
-          <Text textAlign="center" fontWeight="bold" marginTop={5}>期限間近のアイテム</Text>
+          <Text textAlign="center" fontWeight="bold" marginTop={5}>期限切れ・期限間近のアイテム</Text>
           <Cards itemFilter="Expired" />
           <Cards itemFilter="Soon to Expire" />
           <Text textAlign="center" fontWeight="bold" marginTop={5}>おすすめ商品</Text>
