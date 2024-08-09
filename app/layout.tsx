@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "@/components/providers";
 import Header from "@/components/Header";
 import { ChakraProvider } from '@chakra-ui/react';
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,8 +24,10 @@ export default function RootLayout({
         <Providers>
           <ChakraProvider>
             <main>
-              <Header />
-              {children}
+              <Suspense>
+                <Header />
+                {children}
+              </Suspense>
             </main>
           </ChakraProvider>
         </Providers>

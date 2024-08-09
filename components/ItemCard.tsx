@@ -37,11 +37,12 @@ export default function Cards({ itemFilter }: CardsProps) {
             <GridItem key={item?.ItemId} display="flex">
               <Link href={`/stock/${item?.ItemId}`} style={{ width: '100%' }}>
                 <Card maxW="sm" mb={5} display="flex" flexDirection="column" height="100%">
-                  <CardBody  flexGrow={1}>
+                  <CardBody flexGrow={1}>
                     <Image
                       src={item?.ItemImage}
                       alt={item?.ItemName}
                       borderRadius="lg"
+                      margin="auto"
                     />
                     <Stack mt="6" spacing="3">
                       <Heading size="md" textAlign="center">{item?.Category}</Heading>
